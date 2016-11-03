@@ -1,0 +1,58 @@
+
+// Descriptive color variables
+$white						: #fff;
+$black						: #000;
+
+//grey
+$spun-pearl					:#a6a6b9;
+
+// blue
+$ship-cove					: #7477bf;
+$mulled-wine				: #4d4c72;
+
+
+
+// Functional color variables
+$color-primary				: $white;
+$color-secondary			: $ship-cove;
+$color-tertiary				: $mulled-wine;
+
+$color-text-primary			: $black;
+$color-text-secondary       : $white;
+
+$color-link					: $spun-pearl;
+$color-link-hover			: $white;
+
+
+
+// Font stacks
+$stack-sans-serif			: sans-serif;
+
+
+
+// Font size
+$font-size-normal			: 1em;
+
+
+
+// Font weight
+$font-weight-normal			: 500;
+
+
+
+// Line height
+$line-height-normal			: 1.5;
+
+
+// Seperation between sections
+$section-seperation			: 1em;
+
+
+// maximum width of content
+$max-content-width			: 800px;
+
+
+// Media query breakpoints
+
+$break-narrow				: 768px;
+$break-wide					: 1024px;

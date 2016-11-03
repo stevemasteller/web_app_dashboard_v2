@@ -1,0 +1,23 @@
+/*********************************************
+Navigation Styles
+*********************************************/
+
+nav {
+	background-color: $color-tertiary;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+a {
+	width: 40px;
+	
+	& .st0 {
+		fill: $color-link;
+	}
+	
+	&:hover .st0 {
+		fill: $color-link-hover;
+	}
+}

@@ -1,0 +1,61 @@
+/*********************************************
+Header Styles
+*********************************************/
+
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: $color-secondary;
+	color: $color-text-secondary;
+	height: 100px;
+	
+	& div {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	// Logo
+	& div:first-child {
+		flex-basis: 220px;
+		flex-grow: 9;
+	}
+	
+	& h1 {
+		display: flex;
+		margin-left: 10%;
+		font-weight: 600;
+		
+		& span {
+			font-weight: 100;
+		}
+		
+		& span:last-child {
+			font-size: 0.3em;
+			margin-top: 0.9em;
+		}
+	}
+
+	// Profile pic and name
+	& div:last-child {
+		flex-basis: 125px;
+		align-items: center;
+		border-left: 1px solid $color-tertiary;
+		
+		& p {
+			margin: 0.5em;
+		}
+	}
+	
+}
+
+#bell-icon {
+	width: 20px;
+	margin-right: 0.5em;
+}
+
+#profile-pic {
+	width: 35px;
+	height: 35px;
+	border-radius: 20px;
+	margin: 0 0.5em;
+}
