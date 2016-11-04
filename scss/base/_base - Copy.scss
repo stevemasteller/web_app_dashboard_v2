@@ -1,0 +1,31 @@
+/*********************************************
+Global Layout Set-up
+*********************************************/
+
+* { 
+	box-sizing: border-box;
+}
+  
+body {
+	@include text(
+		$font-size-normal,
+		$line-height-normal,
+		$font-weight-normal,
+		$color-text-primary
+	);
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font-family: $stack-sans-serif; 
+	background: $color-primary;
+	min-height: 100vh;
+	
+	@include mq(narrow) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+}
+
+
+

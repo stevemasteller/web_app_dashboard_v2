@@ -1,4 +1,8 @@
 /*********************************************
-Navigation imports
+Dashboard Layout Styles
 *********************************************/
-@import 'nav';
+
+.dashboard {
+	background-color: $color-primary;
+	flex: 1;
+}

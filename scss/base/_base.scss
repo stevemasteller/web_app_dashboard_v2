@@ -7,17 +7,25 @@ Global Layout Set-up
 }
   
 body {
-	@include text(
-		$font-size-normal,
-		$line-height-normal,
-		$font-weight-normal,
-		$color-text-primary
-	);
+	display: flex;
+	flex-direction: column;
+	background: $color-primary;
+	min-height: 100vh;
+
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	font-family: $stack-sans-serif; 
-	background: $color-primary;
+}
+
+a {
+	width: 40px;
+	
+	& .st0 {
+		fill: $color-link;
+	}
+	
+	&:hover .st0 {
+		fill: $color-link-hover;
+	}
 }
 
 

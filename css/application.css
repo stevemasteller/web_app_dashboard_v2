@@ -415,15 +415,19 @@ Global Layout Set-up
   box-sizing: border-box; }
 
 body {
-  font-size: 1em;
-  line-height: 1.5;
-  font-weight: 500;
-  color: #000;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  text-align: left;
-  font-family: sans-serif;
-  background: #fff; }
+  padding: 0; }
+
+a {
+  width: 40px; }
+  a .st0 {
+    fill: #a6a6b9; }
+  a:hover .st0 {
+    fill: #fff; }
 
 /*********************************************
 Header imports
@@ -432,36 +436,36 @@ Header imports
 Header Styles
 *********************************************/
 header {
-  display: flex;
-  justify-content: space-between;
   background-color: #7477bf;
   color: #fff;
-  height: 100px; }
-  header div {
+  height: 100px;
+  display: flex;
+  justify-content: space-between; }
+
+.logo {
+  flex-basis: 200px;
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .logo h1 {
     display: flex;
-    justify-content: space-between; }
-  header div:first-child {
-    flex-basis: 220px;
-    flex-grow: 9; }
-  header h1 {
-    display: flex;
-    margin-left: 10%;
-    font-weight: 600; }
-    header h1 span {
+    font-weight: 700;
+    margin-left: 5%; }
+    .logo h1 span {
       font-weight: 100; }
-    header h1 span:last-child {
+    .logo h1 span:last-child {
       font-size: 0.3em;
       margin-top: 0.9em; }
-  header div:last-child {
-    flex-basis: 125px;
-    align-items: center;
-    border-left: 1px solid #4d4c72; }
-    header div:last-child p {
-      margin: 0.5em; }
 
-#bell-icon {
-  width: 20px;
-  margin-right: 0.5em; }
+.profile {
+  flex-basis: 120px;
+  flex-grow: 1;
+  max-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-left: 1px solid #4d4c72; }
 
 #profile-pic {
   width: 35px;
@@ -469,24 +473,54 @@ header {
   border-radius: 50%;
   margin: 0 0.5em; }
 
+#bell-icon {
+  width: 25px;
+  margin-right: 5%; }
+
 /*********************************************
-Navigation imports
+Layout imports
 *********************************************/
+/*********************************************
+Main Layout Styles
+*********************************************/
+.main-wrapper {
+  background-color: red;
+  flex: 1; }
+  @media screen and (min-width: 768px) {
+    .main-wrapper {
+      display: flex; } }
+
 /*********************************************
 Navigation Styles
 *********************************************/
 nav {
   background-color: #4d4c72;
-  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media screen and (max-width: 767px) {
+    nav {
+      height: 100px; } }
+  @media screen and (min-width: 768px) {
+    nav {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; } }
 
 a {
-  width: 40px; }
+  width: 40px;
+  margin: 20px; }
   a .st0 {
     fill: #a6a6b9; }
   a:hover .st0 {
     fill: #fff; }
+
+/*********************************************
+Dashboard Layout Styles
+*********************************************/
+.dashboard {
+  background-color: #fff;
+  flex: 1; }
 
 /*# sourceMappingURL=application.css.map */

@@ -8,15 +8,21 @@
 }
 
 @mixin mq($break) {
-	@if $break == "narrow" {
+	@if $break == "small" {
 	
-		@media (min-width: $break-narrow) {
+		@media screen and (max-width: $break-narrow - 1) {
+			@content;
+		}
+	} 
+	@else if $break == "narrow" {
+	
+		@media screen and (min-width: $break-narrow) {
 			@content;
 		}
 	} 
 	@else if $break == "wide" {
 		
-		@media (min-width: $break-wide) {
+		@media screen and (min-width: $break-wide) {
 			@content;
 		}
 	}

@@ -1,0 +1,12 @@
+/*********************************************
+Main Layout Styles
+*********************************************/
+
+.main-wrapper {
+	background-color: red;
+	flex: 1;
+	
+	@include mq(narrow) {
+		display: flex;
+	}
+}

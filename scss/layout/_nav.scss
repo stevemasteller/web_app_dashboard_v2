@@ -4,14 +4,28 @@ Navigation Styles
 
 nav {
 	background-color: $color-tertiary;
-	height: 100px;
 	display: flex;
+	
+	// top-bar when small 
 	justify-content: space-around;
 	align-items: center;
+	@include mq(small) {
+		height: 100px;
+	}
+	
+	// side bar when narrow to wide
+	@include mq(narrow) {
+		width: 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
 }
 
+// svg icons
 a {
 	width: 40px;
+	margin: 20px;
 	
 	& .st0 {
 		fill: $color-link;
@@ -21,3 +35,4 @@ a {
 		fill: $color-link-hover;
 	}
 }
+

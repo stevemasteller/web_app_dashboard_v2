@@ -3,27 +3,31 @@ Header Styles
 *********************************************/
 
 header {
-	display: flex;
-	justify-content: space-between;
+	// for layout within body
 	background-color: $color-secondary;
 	color: $color-text-secondary;
 	height: 100px;
 	
-	& div {
-		display: flex;
-		justify-content: space-between;
-	}
+	// for layout within header
+	display: flex;
+	justify-content: space-between;
 	
-	// Logo
-	& div:first-child {
-		flex-basis: 220px;
-		flex-grow: 9;
-	}
+}
+
+.logo {
+	// for layout within header
+	flex-basis: 200px;
+	flex-grow: 2;
 	
-	& h1 {
+	// for layout within logo
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	h1 {
 		display: flex;
-		margin-left: 10%;
-		font-weight: 600;
+		font-weight: 700;
+		margin-left: 5%;
 		
 		& span {
 			font-weight: 100;
@@ -34,23 +38,20 @@ header {
 			margin-top: 0.9em;
 		}
 	}
-
-	// Profile pic and name
-	& div:last-child {
-		flex-basis: 125px;
-		align-items: center;
-		border-left: 1px solid $color-tertiary;
-		
-		& p {
-			margin: 0.5em;
-		}
-	}
 	
 }
 
-#bell-icon {
-	width: 20px;
-	margin-right: 0.5em;
+.profile {
+	// for layout within header
+	flex-basis: 120px;
+	flex-grow: 1;
+	max-width: 220px;
+	
+	// for layout within profile
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-left: 1px solid $color-tertiary;
 }
 
 #profile-pic {
@@ -58,4 +59,9 @@ header {
 	height: 35px;
 	border-radius: 50%;
 	margin: 0 0.5em;
+}
+
+#bell-icon {
+	width: 25px;
+	margin-right: 5%
 }
