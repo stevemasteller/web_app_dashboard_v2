@@ -1,0 +1,47 @@
+/*********************************************
+Traffic Chart Styles
+*********************************************/
+.widget-traffic {
+	// for layout within Dashboard
+	color: $color-text-primary;
+	
+	& span:not(:first-child) {
+		font-weight: 800;
+	}
+	
+	// for layout within traffic
+	& p {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		
+		& span:first-child {
+			margin-right: auto;
+		}
+	}
+	
+	& span {
+		display: inline-block;
+		padding: 0.5em 1em;
+		margin: 0.5em;
+		border-radius: 20px;
+	}
+	
+	& .traffic-selected {
+		background-color: $traffic-btn-bg-active;
+		color 			: $traffic-btn-txt-active;
+	}
+}
+
+// for layout within Dashboard
+.traffic-chart-wrapper {
+	width: 100%;
+	
+	@include mq(small) {
+		height: 200px;
+	}
+	
+	@include mq(narrow) {
+		height: 400px;
+	}
+}

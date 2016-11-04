@@ -523,4 +523,64 @@ Dashboard Layout Styles
   background-color: #fff;
   flex: 1; }
 
+.dashboard div {
+  margin: 2.5%; }
+
+/*********************************************
+Widget imports
+*********************************************/
+/*********************************************
+Alert Styles
+*********************************************/
+.widget-alert {
+  background-color: #7477bf;
+  color: #fff;
+  border-radius: 5px; }
+  .widget-alert p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .widget-alert p span:first-child {
+      font-weight: 800;
+      margin: 0 1em; }
+    .widget-alert p span:last-child {
+      font-weight: 800;
+      padding: 1em;
+      margin-left: auto;
+      cursor: pointer; }
+      .widget-alert p span:last-child:hover {
+        background-color: #4d4c72;
+        border-radius: 5px; }
+
+/*********************************************
+Traffic Chart Styles
+*********************************************/
+.widget-traffic {
+  color: #4d4c72; }
+  .widget-traffic span:not(:first-child) {
+    font-weight: 800; }
+  .widget-traffic p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .widget-traffic p span:first-child {
+      margin-right: auto; }
+  .widget-traffic span {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 20px; }
+  .widget-traffic .traffic-selected {
+    background-color: #81c98f;
+    color: #fff; }
+
+.traffic-chart-wrapper {
+  width: 100%; }
+  @media screen and (max-width: 767px) {
+    .traffic-chart-wrapper {
+      height: 200px; } }
+  @media screen and (min-width: 768px) {
+    .traffic-chart-wrapper {
+      height: 400px; } }
+
 /*# sourceMappingURL=application.css.map */

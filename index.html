@@ -60,9 +60,21 @@
 		</nav>
 		
 		<div class="dashboard">
+			<div class="widget-alert">
+				<p><span>Alert</span> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus portitor. <span>x</span></p>
+			</div>
+			
+			<div class="widget-traffic">
+				<p><span>TRAFFIC</span><span>Hourly</span><span>Daily</span><span class="traffic-selected">Weekly</span><span>Monthly</span></p>
+				<div class="traffic-chart-wrapper">
+					<canvas id="traffic-chart"></canvas>
+				</div>
+			</div>
 		</div>
 	
 	</div>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/app.js"></script>
   </body>
 </html>

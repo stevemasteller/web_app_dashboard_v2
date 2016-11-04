@@ -1,0 +1,36 @@
+/*********************************************
+Alert Styles
+*********************************************/
+
+.widget-alert {
+	// for layout within dashboard
+	background-color: $color-secondary;
+	color: $color-text-secondary;
+	border-radius: 5px;
+	
+	// for layout within alert
+	& p {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		
+		& span:first-child {
+			font-weight: 800;
+			margin: 0 1em;
+		}
+		
+		& span:last-child {
+			font-weight: 800;
+			padding: 1em;
+			margin-left: auto;
+			cursor: pointer;
+			
+			&:hover {
+				background-color: $color-tertiary;
+				border-radius: 5px;
+			}
+		}
+	}
+	
+}
+
