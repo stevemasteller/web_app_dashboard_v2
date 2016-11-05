@@ -1,0 +1,19 @@
+
+// make widget text the same
+
+%widget-text {
+	display: inline-block;
+	padding: 0.5em;
+	margin: 0.5em;
+	border-radius: 20px;
+}
+
+%widget-sizing {
+	@include mq(small) {
+		height: 200px;
+	}
+	
+	@include mq(narrow) {
+		height: 400px;
+	}
+}

@@ -1,0 +1,18 @@
+/*********************************************
+Daily Chart Styles
+*********************************************/
+.widget-daily {
+	// for layout within Dashboard
+	color: $color-text-primary;
+	
+	// for layout within traffic
+	& p {
+		@extend %widget-text;
+	}
+	
+}
+
+// for layout within Dashboard
+.daily-chart-wrapper {
+	@extend %widget-sizing;
+}

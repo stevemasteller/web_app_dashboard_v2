@@ -7,11 +7,45 @@ Traffic Chart Styles
 	
 	& span:not(:first-child) {
 		font-weight: 800;
+		cursor: pointer;
 	}
 	
 	// for layout within traffic
+	& span {
+		@extend %widget-text;
+	}
+	
+	& .traffic-selected {
+		background-color: $traffic-btn-bg-active;
+		color 			: $traffic-btn-txt-active;
+	}
+	
+	& span:not(:first-child):not(.traffic-selected):hover {
+		background-color: lighten($traffic-btn-bg-active, 20%);
+		color			: $traffic-btn-txt-active;
+	}
+	
+	@include mq(small) {
+		& .small {
+			display: flex;
+		}
+		
+		& .narrow {
+			display: none;
+		}
+	}
+	
+	@include mq(narrow) {
+		& .small {
+			display: none;
+		}
+		
+		& .narrow {
+			display: flex;
+		}
+	}	
+	
 	& p {
-		display: flex;
 		justify-content: flex-end;
 		align-items: center;
 		
@@ -20,17 +54,6 @@ Traffic Chart Styles
 		}
 	}
 	
-	& span {
-		display: inline-block;
-		padding: 0.5em 1em;
-		margin: 0.5em;
-		border-radius: 20px;
-	}
-	
-	& .traffic-selected {
-		background-color: $traffic-btn-bg-active;
-		color 			: $traffic-btn-txt-active;
-	}
 }
 
 // for layout within Dashboard

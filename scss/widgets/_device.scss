@@ -1,0 +1,18 @@
+/*********************************************
+Device Chart Styles
+*********************************************/
+.widget-device {
+	// for layout within Dashboard
+	color: $color-text-primary;
+	
+	// for layout within device
+	& p {
+		@extend %widget-text;
+	}
+	
+}
+
+// for layout within Dashboard
+.device-chart-wrapper {
+	@extend %widget-sizing;
+}

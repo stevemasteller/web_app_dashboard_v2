@@ -521,14 +521,39 @@ Dashboard Layout Styles
 *********************************************/
 .dashboard {
   background-color: #fff;
-  flex: 1; }
+  flex: 1;
+  padding: 2.5% 0; }
 
 .dashboard div {
   margin: 2.5%; }
 
+.daily-device-widgets-wrapper {
+  display: flex; }
+  .daily-device-widgets-wrapper div {
+    flex-grow: 1; }
+  @media screen and (max-width: 767px) {
+    .daily-device-widgets-wrapper {
+      flex-direction: column; } }
+  @media screen and (min-width: 768px) {
+    .daily-device-widgets-wrapper {
+      flex-direction: row; } }
+
 /*********************************************
 Widget imports
 *********************************************/
+.widget-traffic span, .widget-daily p, .widget-device p {
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 20px; }
+
+@media screen and (max-width: 767px) {
+  .daily-chart-wrapper, .device-chart-wrapper {
+    height: 200px; } }
+@media screen and (min-width: 768px) {
+  .daily-chart-wrapper, .device-chart-wrapper {
+    height: 400px; } }
+
 /*********************************************
 Alert Styles
 *********************************************/
@@ -558,21 +583,29 @@ Traffic Chart Styles
 .widget-traffic {
   color: #4d4c72; }
   .widget-traffic span:not(:first-child) {
-    font-weight: 800; }
+    font-weight: 800;
+    cursor: pointer; }
+  .widget-traffic .traffic-selected {
+    background-color: #81c98f;
+    color: #fff; }
+  .widget-traffic span:not(:first-child):not(.traffic-selected):hover {
+    background-color: #c8e8ce;
+    color: #fff; }
+  @media screen and (max-width: 767px) {
+    .widget-traffic .small {
+      display: flex; }
+    .widget-traffic .narrow {
+      display: none; } }
+  @media screen and (min-width: 768px) {
+    .widget-traffic .small {
+      display: none; }
+    .widget-traffic .narrow {
+      display: flex; } }
   .widget-traffic p {
-    display: flex;
     justify-content: flex-end;
     align-items: center; }
     .widget-traffic p span:first-child {
       margin-right: auto; }
-  .widget-traffic span {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0.5em;
-    border-radius: 20px; }
-  .widget-traffic .traffic-selected {
-    background-color: #81c98f;
-    color: #fff; }
 
 .traffic-chart-wrapper {
   width: 100%; }
@@ -582,5 +615,17 @@ Traffic Chart Styles
   @media screen and (min-width: 768px) {
     .traffic-chart-wrapper {
       height: 400px; } }
+
+/*********************************************
+Daily Chart Styles
+*********************************************/
+.widget-daily {
+  color: #4d4c72; }
+
+/*********************************************
+Device Chart Styles
+*********************************************/
+.widget-device {
+  color: #4d4c72; }
 
 /*# sourceMappingURL=application.css.map */

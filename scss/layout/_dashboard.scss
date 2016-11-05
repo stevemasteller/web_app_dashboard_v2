@@ -5,8 +5,26 @@ Dashboard Layout Styles
 .dashboard {
 	background-color: $color-primary;
 	flex: 1;
+	padding: 2.5% 0;
 }
 
 .dashboard div {
 	margin: 2.5%;
 }
+
+.daily-device-widgets-wrapper {
+	display: flex;
+	
+	& div {
+		flex-grow: 1;
+	}
+	
+	@include mq(small) {
+		flex-direction: column;
+	}
+	
+	@include mq(narrow) {
+		flex-direction: row;
+	}
+}
+

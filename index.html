@@ -65,9 +65,30 @@
 			</div>
 			
 			<div class="widget-traffic">
-				<p><span>TRAFFIC</span><span>Hourly</span><span>Daily</span><span class="traffic-selected">Weekly</span><span>Monthly</span></p>
+				<p class="small"><span>TRAFFIC</span><span class="traffic-hour">H</span><span class="traffic-day">D</span><span class="traffic-week traffic-selected">W</span><span class="traffic-month">M</spa</p>
+				
+				<p class="narrow"><span>TRAFFIC</span><span class="traffic-hour">Hourly</span><span class="traffic-day">Daily</span><span class="traffic-week traffic-selected">Weekly</span><span class="traffic-month">Monthly</span></p>
+				
 				<div class="traffic-chart-wrapper">
 					<canvas id="traffic-chart"></canvas>
+				</div>
+			</div>
+			
+			<div class="daily-device-widgets-wrapper">
+				<div class="widget-daily">
+					<p>DAILY TRAFFIC</p>
+					
+					<div class="daily-chart-wrapper">
+						<canvas id="daily-chart"></canvas>
+					</div>
+				</div>
+				
+				<div class="widget-device">
+					<p>DEVICE USED</p>
+					
+					<div class="device-chart-wrapper">
+						<canvas id="device-chart"></canvas>
+					</div>
 				</div>
 			</div>
 		</div>
