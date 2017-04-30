@@ -1,0 +1,64 @@
+/*********************************************
+Jobs Styles
+*********************************************/
+
+.jobs-wrapper-top {
+
+	& .jobs-widget-wrapper {
+		// for layout within jobs-widget-wrapper
+		color: $color-text-primary;
+		margin-top: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	
+	& .about {
+		display: none;
+	}
+	
+	& .job-widget {
+		flex-grow: 1;
+		
+		// for layout within job-widget
+		border-style: solid;
+		border-radius: 5px;
+		border-width: 1px;
+		border-color: $color-secondary;
+		display: none;
+	}
+	
+	& .cost-wrapper {
+		display: flex;
+		justify-content: flex;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		
+		.cost {
+			color: $color-text-secondary;
+			font-weight: $font-weight-heavy;
+			background-color: $color-secondary;
+			border-radius: 5px 0px 0px 0px;
+			margin: 0;
+			padding: 0;
+			width: 160px;
+			height: 100%;
+			line-height: line-height-normal;
+		}
+		
+		.info {
+			color: $color-text-tertiary;
+			font-size: $font-size-small;
+			border-style: none none solid none;
+			border-width: 1px;
+			border-color: $color-secondary;
+			margin: 0;
+			padding: 0 0 0 1em;
+			width: 100%;
+			line-height: line-height-normal;
+			text-align: left;
+		}
+	}
+}
+

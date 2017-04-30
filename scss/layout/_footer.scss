@@ -1,0 +1,40 @@
+/*********************************************
+Footer Styles
+*********************************************/
+
+footer {
+
+	background-color: $color-secondary;
+	color: $color-text-secondary;
+	display: flex;
+	text-align: center;
+	
+	// links
+	a {
+		margin: 10;
+		color: $color-link;
+		text-decoration: none;
+	
+		&:hover {
+			color: $color-link-hover;
+		}
+	}
+	
+	// top-bar when small 
+	justify-content: space-around;
+	align-items: center;
+	@include mq(small) {
+		height: 100px;
+	}
+	
+	// side bar when narrow to wide
+	@include mq(narrow) {
+		width: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+
